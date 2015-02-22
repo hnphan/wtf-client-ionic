@@ -44,5 +44,11 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PortalCtrl', function($scope, $state) {
+  $scope.openMenu = function(menuId) {
+    $state.go();
+  };
+})
+
+.controller('FoodMenuCtrl', function($scope, $stateParams) {
 });

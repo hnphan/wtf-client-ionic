@@ -20,4 +20,113 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
+@font-face {
+font-family: Sunn;
+src: url("SUNN.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Oranienbaum;
+	src: url("Oranienbaum.ttf") format("opentype");
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background: #EEE;
+   font-family: 'Lato',verdana, sans-serif;
+   font-size: 60px;
+}
+
+.wrap {
+   overflow: hidden;
+   margin: 5px;
+   font-family: 'Sunn';
+}
+
+.menu-category-header{
+	float: left;
+	position: relative;
+	width: 50%;
+	text-align: center;
+	padding: 5px;
+	font-size: 35px;
+	margin-bottom: 6px;
+}
+
+.to-go-header {
+	float: left;
+	position: relative;
+	text-align: center;
+	padding: 5px;
+	font-size: 35px;
+	width: 100%;
+	margin-bottom: 6px;
+}
+
+.box-left {
+   float: left;
+   position: relative;
+   width: 48%;
+   padding-bottom: 48%;
+   box-shadow: 2px 2px 10px #cdcdcd;
+   border: 1px solid #e1e1e1;
+   margin-right: 2%;
+}
+
+.box {
+   float: left;
+   position: relative;
+   width: 49%;
+   padding-bottom: 48%;
+   box-shadow: 2px 2px 10px #cdcdcd;
+   border: 1px solid #e1e1e1;
+   margin-bottom: 2%;
+}
+
+.boxInner {
+   position: absolute;
+   left: 5px;
+   right: 5px;
+   top: 5px;
+   bottom: 5px;
+   overflow: hidden;
+}
+
+.boxInner img {
+   width: 100%;
+}
+
+.boxInner .titleBox {
+   position: absolute;
+   height: 100%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: 0px;
+   background: #000;
+   background: rgba(0, 0, 0, 0.5);
+   color: #FFF;
+   -webkit-transition: all 0.3s fade-out;
+   -moz-transition: all 0.3s fade-out;
+   -o-transition: all 0.3s fade-out;
+   transition: all 0.3s fade-out;
+}
+
+.table{
+  display:table;
+  width:100%;
+  height:100%;
+}
+
+.table-cell{
+  display:table-cell;
+  text-align:center;
+  vertical-align:middle;
+}
+
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+   margin-bottom: 0;
+}
