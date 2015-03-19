@@ -7156,14 +7156,25 @@ h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 .item, .item-divider {
   right: 0;
   background: rgba(0, 0, 0, 0.4);
   font-size: 60px;
-  padding-top: 30px;
+  padding-top: 35px;
   text-align: right;
   padding-right: 10px; }
+
+.menuDate {
+  position: absolute;
+  padding-top: 20px; }
 
 .menuTitle h1 {
   font-family: Sunn;
   font-size: 80pt;
-  color: #FFF; }
+  color: #FFF;
+  line-height: 80px; }
+
+.menuTitle h3 {
+  font-family: OpenSansRegular;
+  font-size: 13pt;
+  color: #FFF;
+  text-align: right; }
 
 .glutenFree {
   color: #8e44ad;
