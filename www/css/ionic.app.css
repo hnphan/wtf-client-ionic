@@ -7036,7 +7036,7 @@ body {
   padding: 0;
   background: #EEE;
   font-family: 'OpenSansRegular', verdana, sans-serif;
-  font-size: 1.2em; }
+  font-size: 1.1em; }
 
 .wrap {
   overflow: hidden;
@@ -7189,7 +7189,8 @@ h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 .item, .item-divider {
   font-weight: bold; }
 
 .dining-hours {
-  font-size: 0.9em; }
+  font-size: 0.7em;
+  color: #7f8c8d; }
 
 /*body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
    margin-bottom: 0;

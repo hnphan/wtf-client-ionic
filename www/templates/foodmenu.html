@@ -1,63 +1,13 @@
 <ion-view view-title="Menu">
   <ion-content>
   <div class="menuHeaderBox"> 
-	<div class="menuTitle"><h1>Foss</h1>
-		<h3>Thursday, March 18th 2015</h3>
-	</div>
-  	<div class="menuHeaderImage">
-  	        <img src="img/bobs.jpg"/>
-  	</div>
+  <div class="menuTitle"><h1>{{menuData.title}}</h1>
+    <h3>{{menuData.date}}</h3>
   </div>
- <div class="span3"><h3>Breakfast <span class="dining-hours">(8:00 a.m.-11:00 a.m.)</span></h3><p>Fresh Fruit &amp; Yogurt Bar</p>
-<p>Hot Cereal w/Toppings</p>
-<p><span class="glutenFree" title="Gluten Free">(GF)</span>  Omelet Bar<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Scrambled Eggs<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Scrambled Tofu<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Hard Cooked Eggs<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Home Fries<br/>
-Blueberry Pancakes<br/>
-<span class="containsPork" title="Contains Pork">(P)</span>  Sausage Patty</p>
-<p>Bagel Bar</p>
-</div><div class="span3"><h3>Lunch <span class="dining-hours">(11:00 a.m.-5:00 p.m.)</span></h3><p><strong>Soup<br/>
-</strong>Cream of Broccoli</p>
-<p><strong>Grill</strong><br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Omelet Bar</p>
-<p><strong>Simple Serving<br/>
-</strong><span class="glutenFree" title="Gluten Free">(GF)</span>  Beef  Salpicon<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Cilantro Lime Basmati Rice</p>
-<p><strong>International </strong><br/>
-Waffle Bar</p>
-<p><strong>Deli</strong> <strong>&amp; Salad Bar</strong><br/>
-Egg Salad<br/>
-Chicken Caesar Wrap<br/>
-Potato Chips &amp; Dill Pickle Spears</p>
-<p><strong>Pizza &amp; Pasta</strong> <em><br/>
-</em><span class="vegetarian" title="Vegetarian">(V)</span>  Fresh Dough Cheese Pizza<br/>
-<span class="containsPork" title="Contains Pork">(P)</span>  Fresh Dough Pepperoni Pizza<br/>
-<span class="containsPork" title="Contains Pork">(P)</span>  BLT Pizza<br/>
-Cinnamon Sugar Breadsticks</p>
-<p>Macaroni<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Marinara Sauce<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Jalapeno Cheese Sauce<br/>
-Fresh Broccoli Florets</p>
-</div><div class="span3"><h3>Dinner <span class="dining-hours">(5:00 p.m.-9:00 p.m.)</span></h3><p><strong>Soup<br/>
-</strong>Cream of Broccoli</p>
-<p><strong>Grill</strong><br/>
-Classic Cheeseburger on a Toasted Bun<br/>
-<span class="vegetarian" title="Vegetarian">(V)</span>  Garden Burger<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  French Fries</p>
-<p><strong>Simple Servings</strong><br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Ancho Lime Chicken<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Aztec Corn<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Spanish Rice</p>
-<p><strong>International<br/>
-</strong>Grilled Fiesta Lime Ground Turkey Fajita</p>
-<p><strong>Pizza &amp; Pasta<br/>
-</strong><span class="containsPork" title="Contains Pork">(P)</span>  Awesome Potato Skin Bar <strong><br/>
-</strong></p>
-<p>Pasta<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Bolognese Sauce<br/>
-<span class="glutenFree" title="Gluten Free">(GF)</span>  Marinara Sauce</p>
-</div>
+    <div class="menuHeaderImage">
+            <img src="{{menuData.image}}"/>
+    </div>
+  </div>
+<div ng-bind-html="menuContent"></div>
   </ion-content>
 </ion-view>

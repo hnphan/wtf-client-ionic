@@ -22,6 +22,7 @@ $green: #2ecc71;
 $maroon: #801638;
 $purple: #8e44ad;
 $blue: #3498db;
+$wes: #7f8c8d;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -56,7 +57,7 @@ body {
    padding: 0;
    background: #EEE;
    font-family: 'OpenSansRegular',verdana, sans-serif;
-   font-size: 1.2em;
+   font-size: 1.1em;
 }
 
 .wrap {
@@ -231,7 +232,8 @@ h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 .item, .item-divider{
 }
 
 .dining-hours {
-  font-size: 0.9em;
+  font-size: 0.7em;
+  color: $wes;
 }
 /*body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
    margin-bottom: 0;

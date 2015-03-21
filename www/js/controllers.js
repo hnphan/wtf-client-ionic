@@ -50,5 +50,8 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('FoodMenuCtrl', function($scope, $stateParams) {
+.controller('FoodMenuCtrl', function($scope, $stateParams, MenuService) {
+  $scope.menuData = MenuService.get($stateParams.menuId);
+  console.log("menuData: " + $scope.menuData);
+  $scope.menuContent = $scope.menuData.content;
 });
