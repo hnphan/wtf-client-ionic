@@ -1,5 +1,7 @@
 <ion-view view-title="Menu">
   <ion-content>
+        <ion-refresher on-refresh="doRefresh()">
+      </ion-refresher>
   <div class="menuHeaderBox"> 
   <div class="menuTitle"><h1>{{menuData.title}}</h1>
     <h3>{{menuData.date}}</h3>
@@ -11,3 +13,5 @@
 <div ng-bind-html="menuContent"></div>
   </ion-content>
 </ion-view>
+
+

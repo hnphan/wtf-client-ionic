@@ -44,14 +44,42 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PortalCtrl', function($scope, $state) {
-  $scope.openMenu = function(menuId) {
-    $state.go();
-  };
+.controller('PortalCtrl', function($scope, $state, $http, MenuService) {  
+  $scope.doRefresh = function() {
+    console.log('Refreshing!');
+      MenuService.loadData().then($scope.$broadcast('scroll.refreshComplete'));
+    }
 })
 
-.controller('FoodMenuCtrl', function($scope, $stateParams, MenuService) {
-  $scope.menuData = MenuService.get($stateParams.menuId);
-  console.log("menuData: " + $scope.menuData);
-  $scope.menuContent = $scope.menuData.content;
+.controller('FoodMenuCtrl', function($scope, $stateParams, $ionicLoading, MenuService) {
+  $scope.loadingIndicator = $ionicLoading.show({
+    content: 'Loading Data',
+    animation: 'fade-in',
+    showBackdrop: false,
+    maxWidth: 300,
+    showDelay: 500
+  });
+
+  $scope.doRefresh = function() {
+    console.log('Refreshing!');
+      MenuService.getMenu($stateParams.menuId).then(
+        function(promisedData) {
+          $scope.$broadcast('scroll.refreshComplete');
+        });  
+  };
+
+  MenuService.getMenu($stateParams.menuId).then(
+    function(promisedData) {
+      $ionicLoading.hide();
+      if (promisedData != "Error") {
+        $scope.menuData = promisedData;
+        console.log("menuData: " + $scope.menuData);
+        $scope.menuContent = $scope.menuData.content;
+      }
+      else {
+        console.log("Error loading menu data... Will display error message");
+        $scope.menuData = promisedData;
+        $scope.menuContent = $scope.menuData.content;
+      }
+    });
 });

@@ -7113,13 +7113,21 @@ body {
   vertical-align: middle; }
 
 h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 .item, .item-divider {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 1.2em; }
+  font-family: 'OpenSansRegular', sans-serif; }
 
 .span3 {
-  font-size: 0.7em;
+  font-size: 12pt;
   text-align: left;
   margin-left: 10px; }
+
+.error p {
+  text-align: center; }
+
+.error h3 {
+  text-align: center;
+  font-family: Sunn;
+  font-size: 8em;
+  color: #e74c3c; }
 
 .span3 h3 {
   font-family: Sunn;
@@ -7191,6 +7199,19 @@ h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 .item, .item-divider {
 .dining-hours {
   font-size: 0.7em;
   color: #7f8c8d; }
+
+.take4 p {
+  font-size: 12pt;
+  text-align: left;
+  margin-left: 10px; }
+
+.take4 h3 {
+  font-family: Sunn;
+  font-size: 3em;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px; }
 
 /*body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
    margin-bottom: 0;

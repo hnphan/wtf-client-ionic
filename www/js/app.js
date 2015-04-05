@@ -20,7 +20,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+
+
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+    // We need to setup some parameters for http requests
+    // These three lines are all you need for CORS support
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+
   $stateProvider
 
   .state('app', {
@@ -47,15 +55,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-    .state('app.portal', {
-      url: "/portal",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/portal.html",
-          controller: 'PortalCtrl'
-        }
+  .state('app.portal', {
+    url: "/portal",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/portal.html",
+        controller: 'PortalCtrl'
       }
-    })
+    }
+  })
 
   .state('app.single', {
     url: "/menus/:menuId",
