@@ -132,6 +132,32 @@ body {
    font-size: 60px;
 }
 
+
+.boxInnerBlue {
+   position: absolute;
+   left: 5px;
+   right: 5px;
+   top: 5px;
+   bottom: 5px;
+   overflow: hidden;
+}
+.boxInnerBlue img {
+   width: 100%;
+}
+
+.boxInnerBlue .titleBoxBlue {
+   position: absolute;
+   height: 33%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: 33%;
+   background: #000;
+   background: rgba(41, 128, 185, 0.5);
+   color: #FFF;
+   font-size: 60px;
+}
+
 .table{
   display:table;
   width:100%;
